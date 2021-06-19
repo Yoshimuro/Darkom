@@ -9,8 +9,8 @@ const User = sequelize.define('user', {
 })
 const Category = sequelize.define('category', {
     id: {type: DataTypes.INTEGER, primaryKey: true, defaultValue: UUIDV4},
-    title: {type: DataTypes.STRING, unique: true, allowNull:false},
-    description: {type: DataTypes.TEXT, allowNull:false},
+    title: {type: DataTypes.STRING, unique: true},
+    description: {type: DataTypes.TEXT},
     img: {type: DataTypes.STRING, allowNull:false}
 })
 const SubCategory = sequelize.define('subCategory', {

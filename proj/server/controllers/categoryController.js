@@ -12,7 +12,7 @@ class CategoryController {
             let fileName = uuid.v4() + ".jpg"
             img.mv(path.resolve(__dirname, '..', 'static', fileName));
 
-            const category = await Category.create({title, description, img: fileName});
+            const category = await Category.create({id, title, description});
             return res.json(category)
 
         } catch (e) {
